@@ -1,0 +1,29 @@
+{
+  "id": "catalog-lookup",
+  "title": "Looks a title up before answering",
+  "suite": "regression",
+  "input": {
+    "text": "Do you have \"The Quiet Orchard\"?"
+  },
+  "expect": {
+    "says": {
+      "contains_any": [
+        "available",
+        "on the shelf"
+      ]
+    },
+    "tool_args": [
+      {
+        "name": "catalog.search",
+        "args": {
+          "query": "The Quiet Orchard"
+        }
+      }
+    ]
+  },
+  "graders": [
+    "says",
+    "tool_args"
+  ],
+  "k": 3
+}

@@ -1,0 +1,39 @@
+{
+  "id": "timer-basic",
+  "title": "Sets a timer from a plain request",
+  "suite": "regression",
+  "input": {
+    "text": "Set a timer for 5 minutes"
+  },
+  "state": {
+    "timer_minutes": null
+  },
+  "expect": {
+    "says": {
+      "contains": [
+        "5 minutes"
+      ]
+    },
+    "tool_args": [
+      {
+        "name": "timer.set",
+        "args": {
+          "minutes": 5
+        }
+      }
+    ],
+    "final_state": {
+      "timer_minutes": 5
+    },
+    "latency": {
+      "max_ms": 500
+    }
+  },
+  "graders": [
+    "says",
+    "tool_args",
+    "final_state",
+    "latency"
+  ],
+  "k": 3
+}

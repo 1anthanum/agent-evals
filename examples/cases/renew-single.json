@@ -1,0 +1,37 @@
+{
+  "id": "renew-single",
+  "title": "Renews the only loan without asking",
+  "suite": "regression",
+  "input": {
+    "text": "Renew my book please"
+  },
+  "state": {
+    "loans": {
+      "L-1": "The Quiet Orchard"
+    }
+  },
+  "expect": {
+    "tool_args": [
+      {
+        "name": "loan.renew",
+        "args": {
+          "target": "L-1"
+        }
+      }
+    ],
+    "final_state": {
+      "renewed": [
+        "L-1"
+      ]
+    },
+    "turns": {
+      "max_questions": 0
+    }
+  },
+  "graders": [
+    "tool_args",
+    "final_state",
+    "turns"
+  ],
+  "k": 1
+}

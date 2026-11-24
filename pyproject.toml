@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-evals"
+version = "0.1.0"
+description = "Small, file-based evals for AI agents: JSON cases, code-first graders, pass^k, a one-page report. Standard library only."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+agent-evals = "agent_evals.cli:main"
+
+[tool.setuptools]
+packages = ["agent_evals"]

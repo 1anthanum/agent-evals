@@ -1,0 +1,30 @@
+{
+  "id": "renew-ambiguous",
+  "title": "Asks which book when two are on loan, and does nothing yet",
+  "suite": "regression",
+  "input": {
+    "text": "Please renew my book"
+  },
+  "state": {
+    "loans": {
+      "L-1": "The Quiet Orchard",
+      "L-2": "A Field Guide to Clouds"
+    }
+  },
+  "expect": {
+    "says": {
+      "asks_question": true
+    },
+    "turns": {
+      "max_questions": 1,
+      "max_tool_calls": 0
+    },
+    "final_state": "unchanged"
+  },
+  "graders": [
+    "says",
+    "turns",
+    "final_state"
+  ],
+  "k": 3
+}

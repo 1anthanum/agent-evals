@@ -1,0 +1,21 @@
+{
+  "id": "greeting-tone",
+  "title": "Greeting sounds friendly (needs a judge)",
+  "suite": "capability",
+  "input": {
+    "text": "hello"
+  },
+  "expect": {
+    "rubric": {
+      "criteria": [
+        "friendly",
+        "offers help"
+      ],
+      "min_score": 4
+    }
+  },
+  "graders": [
+    "rubric"
+  ],
+  "k": 1
+}

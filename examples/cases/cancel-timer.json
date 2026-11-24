@@ -1,0 +1,27 @@
+{
+  "id": "cancel-timer",
+  "title": "Cancels a running timer",
+  "suite": "regression",
+  "input": {
+    "text": "Cancel the timer"
+  },
+  "state": {
+    "timer_minutes": 10
+  },
+  "expect": {
+    "final_state": {
+      "timer_minutes": null
+    },
+    "says": {
+      "contains": [
+        "cancelled"
+      ]
+    }
+  },
+  "graders": [
+    "final_state",
+    "says"
+  ],
+  "k": 1,
+  "pending": "timer.cancel tool not built yet"
+}

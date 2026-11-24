@@ -1,0 +1,18 @@
+{
+  "id": "greeting-short",
+  "title": "Greeting stays under 80 characters every time",
+  "suite": "capability",
+  "input": {
+    "text": "hi"
+  },
+  "expect": {
+    "says": {
+      "any": true,
+      "max_chars": 80
+    }
+  },
+  "graders": [
+    "says"
+  ],
+  "k": 3
+}

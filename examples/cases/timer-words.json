@@ -1,0 +1,20 @@
+{
+  "id": "timer-words",
+  "title": "Understands a timer length written in words",
+  "suite": "capability",
+  "input": {
+    "text": "Set a timer for half an hour"
+  },
+  "state": {
+    "timer_minutes": null
+  },
+  "expect": {
+    "final_state": {
+      "timer_minutes": 30
+    }
+  },
+  "graders": [
+    "final_state"
+  ],
+  "k": 3
+}
